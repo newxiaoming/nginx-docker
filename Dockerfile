@@ -78,7 +78,7 @@ RUN apk update && apk add ${EXTEND} &&\
  rm -rf /var/cache/apk/* &&\
  rm -rf /tmp/*
 
-VOLUME ["${CONFIG_DIR}/nginx/conf.d", "${CONFIG_DIR}/nginx/certs.d", "${BASE_DIR}/logs", "${WWWROOT_DIR}", "${BASE_DIR}/tmp"]
+# VOLUME ["${CONFIG_DIR}/nginx/conf.d", "${CONFIG_DIR}/nginx/certs.d", "${BASE_DIR}/logs", "${WWWROOT_DIR}", "${BASE_DIR}/tmp"]
 
 EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
