@@ -11,6 +11,7 @@ ENV NGINX_VERSION="nginx-1.18.0" \
  ZLIB_VERSION="zlib-1.2.11" \
  CONFIG_DIR="${BASE_DIR}/config" \
  INSTALL_DIR=${BASE_DIR}/program/nginx \
+ BASE_PACKAGE="nodejs npm python3 python3-dev"\
  EXTEND="gcc g++ make bzip2 perl openssl-dev file" \
  WWWROOT_DIR="${BASE_DIR}/data/wwwroot"
 
@@ -60,7 +61,7 @@ RUN \
  apk del tzdata &&\
  rm -rf /var/cache/apk/*
 
-RUN apk update && apk add ${EXTEND} &&\
+RUN apk update && apk add ${EXTEND} ${BASE_PACKAGE} &&\
  wget ${NGINX_URL} &&\
  wget ${PCRE_URL} &&\
  wget ${ZLIB_URL} &&\
