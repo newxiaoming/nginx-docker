@@ -15,7 +15,7 @@ ENV NGINX_VERSION="nginx-1.18.0" \
  WWWROOT_DIR="${BASE_DIR}/data/wwwroot"
 
  ENV NGINX_URL="http://nginx.org/download/${NGINX_VERSION}.tar.gz" \
- PCRE_URL="https://ftp.pcre.org/pub/pcre/${PCRE_VERSION}.tar.gz" \
+ PCRE_URL="https://ftp.exim.org/pub/pcre/${PCRE_VERSION}.tar.gz" \
  ZLIB_URL="http://zlib.net/${ZLIB_VERSION}.tar.gz" \
  CONFIGURE="./configure \
  --user=www \
